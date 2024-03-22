@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  commyapi:
+    image: ${DOCKER_REGISTRY-}commyapi
+    build:
+      context: .
+      dockerfile: CommyAPI/Dockerfile
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 7EDBE229-7E97-41E1-988D-A5927C3E15B0
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+      - ./configdb:/data/configdb

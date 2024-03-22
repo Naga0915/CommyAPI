@@ -1,0 +1,5 @@
+db.createUser({user:"commyBBS",pwd:"7EDBE229-7E97-41E1-988D-A5927C3E15B0",roles:[{role:"userAdmin",db:"commyBBS"}]})
+use commyBBS
+show dbs
+show db
+q
